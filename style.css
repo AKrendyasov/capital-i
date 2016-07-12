@@ -1,0 +1,51 @@
+
+* {
+    margin: 0;
+    padding: 0;
+     
+   }
+   body {
+   	background:#d9d8d8;
+   }
+#wrapper{
+	width: 1415px;
+	margin:0px;
+	border: none;
+
+}
+#logo{
+	border: none;
+	
+}
+div {
+   margin: 0px;
+   }
+
+ .img {
+    line-height: 1px; /* Межстрочное расстояние */
+   }
+
+#okno { 
+    width: 300px; /* Ширина */
+    height: 600px;
+    background: #d9d8d8; /* Цвет фона */
+    padding: 20px; /* Поля */
+    -moz-box-sizing: border-box; /* Для Firefox */
+    -webkit-box-sizing: border-box; /* Для Safari и Chrome */
+    box-sizing: border-box; /* Для IE и Opera */
+   border: 100px ;
+   float: left; /* Обтекание по правому краю */
+   }
+
+   #forma{
+
+   	 width: 300px; /* Ширина слоя */
+margin: 0px; /* Значение отступов */
+border: 0px;  /* Параметры границы */
+padding: 0px; 
+
+   }
+    select {
+    width: 250px; /* Ширина списка в пикселах */
+   }
+

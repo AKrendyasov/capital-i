@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset= utf-8">
+	<title>Главная страница</title>
+
+	<style>
+/*		* {
+			margin: 0;
+			padding: 0;
+		}*/
+		body {
+			background:#d9d8d8;
+		}
+		#wrapper{
+			width: 1356px;
+			margin:0px;
+			border: none;
+
+		}
+		#logo{
+			border: none;
+
+		}
+		div {
+			margin: 0px;
+		}
+
+		.img {
+			line-height: 1px; /* Межстрочное расстояние */
+		}
+
+		#okno {
+			width: 200px; /* Ширина */
+			height: 600px;
+			background: #d9d8d8; /* Цвет фона */
+			padding: 1px; /* Поля */
+			-moz-box-sizing: border-box; /* Для Firefox */
+			-webkit-box-sizing: border-box; /* Для Safari и Chrome */
+			box-sizing: border-box; /* Для IE и Opera */
+			border: 4px ;
+			float: left; /* Обтекание по правому краю */
+		}
+
+		#forma{
+
+			width: 200px; /* Ширина слоя */
+			margin: 0px; /* Значение отступов */
+			border: 0px;  /* Параметры границы */
+			padding: 0px;
+
+		}
+		select {
+			width: 250px; /* Ширина списка в пикселах */
+		}
+
+		.simple-little-table {
+			font-family:Arial, Helvetica, sans-serif;
+			color:#666;
+			font-size:12px;
+			text-shadow: 1px 1px 0px #fff;
+			background:#eaebec;
+			margin:auto;
+			border:#ccc 1px solid;
+			border-collapse:separate;
+
+			-moz-border-radius:3px;
+			-webkit-border-radius:3px;
+			border-radius:3px;
+
+			-moz-box-shadow: 0 1px 2px #d1d1d1;
+			-webkit-box-shadow: 0 1px 2px #d1d1d1;
+			box-shadow: 0 1px 2px #d1d1d1;
+		}
+
+		.simple-little-table th {
+			font-weight:bold;
+			font-size:10px;
+			padding:3px 3px 3px 3px;
+			border-top:1px solid #fafafa;
+			border-bottom:1px solid #e0e0e0;
+
+			background: #ededed;
+			background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+			background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+		}
+		.simple-little-table th:first-child{
+			display: none;
+			text-align: left;
+			padding-left:3px;
+		}
+		.simple-little-table tr:first-child th:first-child{
+			-moz-border-radius-topleft:3px;
+			-webkit-border-top-left-radius:3px;
+			border-top-left-radius:3px;
+		}
+		.simple-little-table tr:first-child th:last-child{
+			-moz-border-radius-topright:3px;
+			-webkit-border-top-right-radius:3px;
+			border-top-right-radius:3px;
+		}
+		.simple-little-table tr{
+			text-align: center;
+			padding-left:3px;
+		}
+		.simple-little-table tr td:first-child{
+			display: none;
+			text-align: left;
+			padding-left:3px;
+			border-left: 0;
+		}
+		.simple-little-table tr td {
+			padding:5px;
+			border-top: 1px solid #ffffff;
+			border-bottom:1px solid #e0e0e0;
+			border-left: 1px solid #e0e0e0;
+
+			background: #fafafa;
+			background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+			background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+		}
+		.simple-little-table tr:nth-child(even) td{
+			background: #f6f6f6;
+			background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+			background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+		}
+		.simple-little-table tr:last-child td{
+			font-size:12px;
+			background-color: saddlebrown;
+			border-bottom:0;
+		}
+		.simple-little-table tr:last-child td:first-child{
+			-moz-border-radius-bottomleft:3px;
+			-webkit-border-bottom-left-radius:3px;
+			border-bottom-left-radius:3px;
+		}
+		.simple-little-table tr:last-child td:last-child{
+			color: red;
+			-moz-border-radius-bottomright:3px;
+			-webkit-border-bottom-right-radius:3px;
+			border-bottom-right-radius:3px;
+		}
+		.simple-little-table tr:hover td{
+			background: #f2f2f2;
+			background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+			background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
+		}
+
+		.simple-little-table a:link {
+			color: #666;
+			font-weight: bold;
+			text-decoration:none;
+		}
+		.simple-little-table a:visited {
+			color: #999999;
+			font-weight:bold;
+			text-decoration:none;
+		}
+		.simple-little-table a:active,
+		.simple-little-table a:hover {
+			color: #bd5a35;
+			text-decoration:underline;
+		}
+
+		.simple-little-table th:nth-child(n+4):nth-child(-n+7){
+			display: none;
+			text-align: left;
+			padding-left:3px;
+		}
+
+		.simple-little-table td:nth-child(n+4):nth-child(-n+7){
+			display: none;
+			text-align: left;
+			padding-left:3px;
+		}
+		.clear {
+			clear: left; /* Отмена обтекания */
+		}
+		caption.nameRep {
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:25px;
+			margin:auto;
+			text-align: center;
+			color: black; /* Отмена обтекания */
+		}
+	</style>
+
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function(){
+				$("#inputpay").click(function () {
+					var controlPayCompany=$("#controlPayCompany").val();
+					var inputPayVal=$("#inputPayVal").val();
+					var selectedPayYear=$("#selectedPayYear").val();
+					var selectedPayMonth=$("#selectedPayMonth").val();
+					$.post("/inputPay",{controlPayCompany:controlPayCompany, inputPayVal:inputPayVal,selectedPayMonth:selectedPayMonth,selectedPayYear:selectedPayYear }, function(data){
+					console.log("На сервер отправлена оплата в "+inputPayVal+" за "+selectedPayMonth+"."+selectedPayYear)
+
+					 })
+				 });
+
+				$("#writer").click(function () {
+					var user=$("#user").val();
+					var selectedReport=$("#selectedReport").val();
+/*					var selectedPayYear=[]
+					$("#selectedPayYear:selected").each(function()
+					{
+						selectedPayYear.push($(this).val());
+					});
+
+
+					var selectedPayMonth=[]
+					$("#selectedPayMonth:selected").each(function()
+					{
+						selectedPayMonth.push($(this).val());
+					});*/
+
+					$.post("/writer",{user:user}, function(data){
+						var tableValue=JSON.parse(data);
+						//Создаем создаем таблицу, крепим её к div, инициализируем и объявляем переменную для создания строк в таблице.
+						var mytable = $('<table/>', {
+							class: 'simple-little-table',
+							cellspacing:'0',
+							width:'700px'
+
+						});
+						$('.content').append(mytable);
+						//
+
+						$('.simple-little-table').append(
+								$('<caption/>', {
+									class: 'nameRep',
+									text: "Отчет о выпадающих доходах"
+								}),
+								$('<tr/>', {
+									class: 'hea'
+								})
+						);
+						$('.hea').append(
+								$('<th/>', {
+									text: "Адрес"
+								}),
+								$('<th/>', {
+									text: "Год"
+								}),
+								$('<th/>', {
+									text: "Месяц"
+								}),
+								$('<th/>', {
+									text: "Коли чество вла дельцев льготы"
+								}),
+								$('<th/>', {
+									text: "Коли чество пользую щихся льготой"
+								}),
+								$('<th/>', {
+									text: "Факти чески занима емая площадь"
+								}),
+								$('<th/>', {
+									text: "Площадь для расчета льготы"
+								}),
+								$('<th/>', {
+									text: "Оплата жилья на основную площадь"
+								}),
+								$('<th/>', {
+									text: "Оплата жилья на излишки площади"
+								}),
+								$('<th/>', {
+									text: "Плата за соци альный наем"
+								}),
+								$('<th/>', {
+									text: "Плата за коммер ческий наем"
+								}),
+								$('<th/>', {
+									text: "Плата за наем в бездота ционных домах"
+								}),
+								$('<th/>', {
+									text: "Отоп ление"
+								}),
+								$('<th/>', {
+									text: "Капита льный ремонт"
+								}),
+								$('<th/>', {
+									text: "Водопровод и канализация"
+								}),
+								$('<th/>', {
+									text: "ГВС"
+								}),
+								$('<th/>', {
+									text: "Электро энергия"
+								}),
+								$('<th/>', {
+									text: "Сумма компенсации"
+								}),
+								$('<th/>', {
+									text: "Сумма изменения"
+								}),
+								$('<th/>', {
+									text: "Управляющая компания"
+								}),
+								$('<th/>', {
+									text: "Наличие записи"
+								}),
+								$('<th/>', {
+									text: "Оплачено по водоканалу"
+								}),
+								$('<th/>', {
+									text: "Расхождение"
+								})
+
+						);
+						$.each(tableValue, function (index, value) {
+							var trVal=value;
+							var DataCell = $('<tr/>');
+							//Переопределяем строку
+							$('.simple-little-table').append(DataCell);
+							//Пробегаемся по строкам, создаем ячейки, присваиваем им содержимое и класс red, если запись отсутствует в базе.
+							$.each(trVal, function (key, value) {
+								if(trVal.recExistense==1){
+									DataCell.append(
+											$('<td/>', {
+												text: value
+											})
+									);
+								}else{
+									DataCell.append(
+										$('<td/>', {
+											class:"red",
+											text: value
+										})
+								);
+								}
+							});
+						});
+					})
+				});
+
+
+
+			});
+		</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+
+			<div id="logo">
+				<img src="img/logo1.png" alt="Логотип" width="1356" height="208" >
+
+				<div style="width:15%; float:left" id="okno"><p>
+					<p>
+					<div id="forma" width="20%">
+						<div id="sidebar" class="box">
+							<h2>Ввод оплаты</h2>
+								<form action="/inputpay" method="post">
+
+									<input id ="inputPayVal" value="0.00" type="text" size="31">
+
+									<div class="box">
+										<p>
+											<select id="controlPayCompany" size="3" name="controlCompany">
+												<option disabled>Выберите управляющую организацию:</option>
+												<option value=' Открытое акционерное общество "УК "Городская"' selected> Открытое акционерное общество "УК "Городская"</option>
+
+											</select></p>
+									</div>
+
+									<div id="selectedPayYear1">
+										<p>
+										<select id="selectedPayYear" size="3" name="years">
+											<option disabled>Выберите год:</option>
+											<option value='2016' selected>2016</option>
+											<option value='2015'>2015</option>
+										</select></p>
+									</div>
+
+									<div id="selectedPayMonth1">
+										<p><select id="selectedPayMonth" size="13" name="months">
+											<option disabled>Выберите месяц:</option>
+											<option value='1' selected>Январь</option>
+											<option value='2'>Февраль</option>
+											<option value='3'>Март</option>
+											<option value='4'>Апрель</option>
+											<option value='5'>Май</option>
+											<option value='6'>Июнь</option>
+											<option value='7'>Июль</option>
+											<option value='8'>Август</option>
+											<option value='9'>Сентябрь</option>
+											<option value='10'>Октябрь</option>
+											<option value='11'>Ноябрь</option>
+											<option value='12'>Декабрь</option>
+											</select>
+										</p>
+									</div>
+									<input type="button" id="inputpay" value="Занести оплату">
+								</form>
+
+
+
+							<h3>Загрузка документов</h3>
+							<div id="documentUpload" class="box" >
+								<form action="/" enctype="multipart/form-data" method="post">
+									<input type="file" name="upload" multiple>
+									<input type="submit" value="Загрузить">
+								</form>
+
+							</div>
+
+
+
+							<h3>Вывод отчетов</h3>
+							<form action="/writer" enctype="multipart/form-data" method="post">
+								<div id="report" class="box">
+									<p id="tablica">
+										<select id="selectedReport" size="3" name="report" >
+										<option disabled>Выберите отчет:</option>
+										<option value='lostIncomeCompany' selected>По выпадающим доходам по компании</option>
+										</select>
+									</p>
+								</div>
+
+
+								<div class="box">
+									<p>
+										<select id="controlCompany" size="3" name="controlCompany">
+										<option disabled>Выберите управляющую организацию:</option>
+										<option value=' Открытое акционерное общество "УК "Городская"' selected>Открытое акционерное общество "УК "Городская"</option>
+
+									</select></p>
+								</div>
+	<!--
+								<div id="houseList1" class="box">
+									<p><select id="houseList" size="3" multiple name="houseList[]">
+										<option disabled>Выберите адрес:</option>
+										<option value='Лермонтовский просп. 12' selected>Лермонтовский просп. 12</option>
+									</select></p>
+								</div>
+							<div class="box">
+									<p><select size="3" multiple name="years[]">
+										<option disabled>Выберите год:</option>
+										<option value='2016'>2016</option>
+										<option value='2015'>2015</option>
+									</select></p>
+								</div>
+
+								<div class="box">
+									<p><select size="3" multiple name="months[]">
+										<option disabled>Выберите месяц:</option>
+										<option value='1'>Январь</option>
+										<option value='2'>Февраль</option>
+										<option value='3'>Март</option>
+										<option value='4'>Апрель</option>
+										<option value='5'>Май</option>
+										<option value='6'>Июнь</option>
+										<option value='7'>Июль</option>
+										<option value='8'>Август</option>
+										<option value='9'>Сентябрь</option>
+										<option value='10'>Октябрь</option>
+										<option value='11'>Ноябрь</option>
+										<option value='12'>Декабрь</option>
+									</select></p>
+								</div>-->
+
+									<input type="button" id="writer" value="вывести отчет">
+							</form>
+					</div>
+
+					<div id="clean" class="box" >
+						<form action="/cleaner" enctype="multipart/form-data" method="get">
+							<input type="submit" value="Очистить форму">
+						</form>
+
+			</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="width:85%; float:left" class="content">
+		</div>
+	</div>
+</body>
+</html>
